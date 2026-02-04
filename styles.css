@@ -3,3 +3,10 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-image: url('images/flowers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
