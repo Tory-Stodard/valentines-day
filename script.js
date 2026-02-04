@@ -1,3 +1,4 @@
+// Global Variables
 let timeoutID;
 const gif = document.querySelector('.gif');
 const noBtn = document.querySelector('.no-btn');
@@ -5,15 +6,15 @@ const noBtn = document.querySelector('.no-btn');
 noBtn.addEventListener('mouseenter', function () {
   const rect = noBtn.getBoundingClientRect();
 
-  // Generate random movement
+  // Generate random button movement
   const randomX = Math.floor(Math.random() * 200) - 100;
   const randomY = Math.floor(Math.random() * 200) - 100;
 
-  // Calculate new position
+  // Calculate new button position
   let newLeft = rect.left + randomX;
   let newTop = rect.top + randomY;
 
-  // Clamp to viewport bounds
+  // Clamp button to viewport bounds
   newLeft = Math.max(0, Math.min(newLeft, window.innerWidth - rect.width));
   newTop = Math.max(0, Math.min(newTop, window.innerHeight - rect.height));
 
@@ -48,6 +49,7 @@ function clickedYes() {
 
   checkTimeout();
 
+  // function from canvas confetti library
   confetti({
     particleCount: 150,
     spread: 50,
