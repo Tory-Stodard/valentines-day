@@ -25,9 +25,7 @@ function clickedYes() {
     'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Y2xyNnFyc2hiaWplaDN1NHg4NXNkNm42ZTd4M2pkOTdra2pmMWF4MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aJaP8dcJk4HFphGz7u/giphy.gif',
   ];
 
-  if (timeoutID) {
-    clearTimeout(timeoutID);
-  }
+  checkTimeout();
 
   confetti({
     particleCount: 150,
@@ -40,7 +38,7 @@ function clickedYes() {
 }
 
 function clickedNo() {
-  const noGifs = [
+  const gifs = [
     'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ajV4ZmVieHV4azYzaDMwbnNic3JidHdmcmpkN2RrdDUzZ3VoZjd3ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9uu6VPW4tZbH2/giphy.gif',
     'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bTI1eGUyeXBzenVqM2x3djBkbnR2d29mN2kyaGVsaGlxc3l0NDUwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hLYpV3AHfaBdVKm1WU/giphy.gif',
     'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bTI1eGUyeXBzenVqM2x3djBkbnR2d29mN2kyaGVsaGlxc3l0NDUwYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5q2de1tg1SVZ6GG1u9/giphy.gif',
@@ -51,7 +49,8 @@ function clickedNo() {
     'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTVqM2ZmdG82Y3A5M3pqbXVyMmZvczFoejh1dmV3Y2hnMG5wb2h1ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bdwApHpCFU9g5IVLqj/giphy.gif',
   ];
 
-  alert("Yeah, you're not really my type anways. I just felt sorry for you.");
+  checkTimeout();
+  getRandomGif(gifs);
 }
 
 function hideImage() {
@@ -62,5 +61,11 @@ function getRandomGif(gifs) {
   let randomGif = Math.floor(Math.random() * gifs.length);
   gif.src = gifs[randomGif];
   gif.classList.remove('hidden');
-  timeoutID = setTimeout(hideImage, 2500);
+  timeoutID = setTimeout(hideImage, 3000);
+}
+
+function checkTimeout() {
+  if (timeoutID) {
+    clearTimeout(timeoutID);
+  }
 }
