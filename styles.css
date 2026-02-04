@@ -10,3 +10,13 @@ body {
   background-size: cover;
   text-align: center;
 }
+
+.gif {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
