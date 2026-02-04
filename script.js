@@ -1,5 +1,26 @@
 let timeoutID;
 const gif = document.querySelector('.gif');
+const noBtn = document.querySelector('.no-btn');
+
+noBtn.addEventListener('mouseenter', function () {
+  const rect = noBtn.getBoundingClientRect();
+
+  // Generate random movement
+  const randomX = Math.floor(Math.random() * 200) - 100;
+  const randomY = Math.floor(Math.random() * 200) - 100;
+
+  // Calculate new position
+  let newLeft = rect.left + randomX;
+  let newTop = rect.top + randomY;
+
+  // Clamp to viewport bounds
+  newLeft = Math.max(0, Math.min(newLeft, window.innerWidth - rect.width));
+  newTop = Math.max(0, Math.min(newTop, window.innerHeight - rect.height));
+
+  noBtn.style.position = 'fixed';
+  noBtn.style.left = newLeft + 'px';
+  noBtn.style.top = newTop + 'px';
+});
 
 function clickedYes() {
   const gifs = [
