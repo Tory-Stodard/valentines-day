@@ -44,6 +44,8 @@ button {
   margin: 0.5rem;
   border: 2px solid rgb(246, 89, 115);
   border-radius: 10px;
+  color: rgb(214, 27, 27);
+  font-weight: bold;
   background-color: rgb(255, 237, 242);
 }
 
