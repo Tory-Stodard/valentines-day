@@ -52,7 +52,7 @@ function clickedYes() {
 
   checkTimeout();
 
-  // function from canvas confetti library
+  // function call from canvas confetti library
   confetti({
     particleCount: 200,
     spread: 69,
@@ -63,6 +63,7 @@ function clickedYes() {
   getRandomGif(gifs);
 }
 
+// Functions
 function clickedNo() {
   const gifs = [
     'https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ajV4ZmVieHV4azYzaDMwbnNic3JidHdmcmpkN2RrdDUzZ3VoZjd3ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9uu6VPW4tZbH2/giphy.gif',
