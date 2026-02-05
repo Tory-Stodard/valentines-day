@@ -49,12 +49,6 @@ button {
   background-color: rgb(255, 237, 242);
 }
 
-button:hover {
-  box-shadow: 0 8px 16px 0 rgba(96, 96, 96, 0.6);
-  transition-duration: 0.3s;
-  cursor: pointer;
-}
-
 footer {
   background-color: rgb(255, 237, 242);
   display: flex;
@@ -95,5 +89,13 @@ a {
 @media (max-width: 700px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media (hover: hover) {
+  button:hover {
+    box-shadow: 0 8px 16px 0 rgba(96, 96, 96, 0.6);
+    transition-duration: 0.3s;
+    cursor: pointer;
   }
 }
