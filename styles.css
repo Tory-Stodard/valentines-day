@@ -7,7 +7,11 @@
   padding: 0;
 }
 
+/* Element Selectors */
+
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-image: url('images/flowers.jpg');
   background-repeat: no-repeat;
@@ -19,11 +23,13 @@ body {
 }
 
 header {
-  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(255, 237, 242);
 }
 
 main {
   margin: 1rem;
+  flex: 1;
 }
 
 h1 {
@@ -47,6 +53,20 @@ button:hover {
   cursor: pointer;
 }
 
+footer {
+  background-color: rgb(255, 237, 242);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 0.25rem;
+}
+
+a {
+  color: rgb(214, 27, 27);
+}
+
+/* Class Selectors */
+
 .subtitle {
   font-size: 1.5rem;
   color: rgb(246, 89, 115);
@@ -67,6 +87,8 @@ button:hover {
 .hidden {
   display: none;
 }
+
+/* Media Queries */
 
 @media (max-width: 700px) {
   html {
