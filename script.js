@@ -3,12 +3,12 @@ let timeoutID;
 const gif = document.querySelector('.gif');
 const noBtn = document.querySelector('.no-btn');
 
-noBtn.addEventListener('mouseenter', function () {
+noBtn.addEventListener('mousemove', function () {
   const rect = noBtn.getBoundingClientRect();
 
   // Generate random button movement
-  const randomX = Math.floor(Math.random() * 200) - 100;
-  const randomY = Math.floor(Math.random() * 200) - 100;
+  const randomX = Math.floor(Math.random() * 400) - 200;
+  const randomY = Math.floor(Math.random() * 400) - 200;
 
   // Calculate new button position
   let newLeft = rect.left + randomX;
