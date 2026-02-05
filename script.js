@@ -51,9 +51,9 @@ function clickedYes() {
 
   // function from canvas confetti library
   confetti({
-    particleCount: 150,
-    spread: 50,
-    startVelocity: 35,
+    particleCount: 200,
+    spread: 69,
+    startVelocity: 40,
     colors: ['#ffffff', '#ebc7c7', '#e57272', '#e14545', '#dcc6c6', '#e71414'],
   });
 
